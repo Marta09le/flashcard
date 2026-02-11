@@ -21,6 +21,9 @@ app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="stat
 def on_startup():
     Base.metadata.create_all(bind=engine)
 
+@app.get("/about")
+def about(request: Request):
+    return templates.TemplateResponse("about.html", {"request": request})
 
 @app.get("/")
 def index(request: Request, db: Session = Depends(get_db)):
