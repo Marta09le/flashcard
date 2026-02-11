@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Додати слово</h1>
+
+<form class="form" method="post" action="/add">
+  <label>Word</label>
+  <input name="word" placeholder="e.g. improve" required>
+
+  <label>Translation</label>
+  <input name="translation" placeholder="e.g. покращувати" required>
+
+  <label>Example (optional)</label>
+  <input name="example" placeholder="e.g. I want to improve my English.">
+
+  <button type="submit">Save</button>
+</form>
+{% endblock %}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title if title else "Flashcard Vault" }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="brand" href="/">Flashcard Vault</a>
+      <nav class="nav">
+        <a href="/add">+ Add</a>
+        <a href="/quiz">Quiz</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+      <small></small>
+    </footer>
+  </div>
+</body>
+</html>

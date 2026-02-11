@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Quiz</h1>
+
+{% if message %}
+  <p>{{ message }}</p>
+{% elif not card %}
+  <p>Немає слів для квізу.</p>
+{% else %}
+  <div class="quizbox">
+    <div class="qword">{{ card.word }}</div>
+
+    <form class="form" method="post" action="/quiz">
+      <input type="hidden" name="card_id" value="{{ card.id }}">
+      <label>Твій переклад</label>
+      <input name="answer" placeholder="Введи переклад" required>
+      <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+      {% if result.ok %}
+        <p class="ok">✅ Правильно!</p>
+      {% else %}
+        <p class="bad">❌ Неправильно.</p>
+        <p>Твоя відповідь: <b>{{ result.user }}</b></p>
+        <p>Правильно: <b>{{ result.correct }}</b></p>
+      {% endif %}
+      <a class="link" href="/quiz">Next word →</a>
+    {% endif %}
+  </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,22 @@
+body { font-family: Arial, sans-serif; background:#0b1020; color:#e9eefc; margin:0; }
+.container { max-width: 980px; margin:0 auto; padding: 16px; }
+.header { display:flex; justify-content:space-between; align-items:center; padding:12px 0; }
+.brand { color:#e9eefc; text-decoration:none; font-weight:700; font-size:20px; }
+.nav a { color:#a9b7ff; margin-left:12px; text-decoration:none; }
+.main { background:#121a33; padding:16px; border-radius:12px; }
+.cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:12px; }
+.card { background:#0e1530; border:1px solid #23305c; border-radius:12px; padding:12px; }
+.row { display:flex; justify-content:space-between; gap:10px; }
+.word { font-size:18px; font-weight:700; }
+.trans { color:#a9b7ff; margin-top:4px; }
+.example { margin-top:8px; color:#cfd7ff; font-size: 13px; opacity:0.9; }
+.form { display:flex; flex-direction:column; gap:10px; max-width:520px; }
+input { padding:10px; border-radius:10px; border:1px solid #2a3970; background:#0b1020; color:#e9eefc; }
+button { padding:10px 12px; border-radius:10px; border:0; background:#4c6fff; color:white; cursor:pointer; font-weight:700; }
+button.danger { background:#ff4c7a; }
+.quizbox { background:#0e1530; border:1px solid #23305c; border-radius:12px; padding:14px; max-width:520px; }
+.qword { font-size:28px; font-weight:800; margin-bottom:12px; }
+.ok { color:#63ff9a; font-weight:700; }
+.bad { color:#ff6b6b; font-weight:700; }
+.link { display:inline-block; margin-top:10px; color:#a9b7ff; text-decoration:none; }
+.footer { opacity:0.7; padding:12px 0; }
